@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX uvod</title>
+</head>
+<script type="text/javascript">
+ function prvaAjaxFunkcija(){
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload= function (){
+        //callback funkcija
+        document.getElementById("uvod").innerHTML=this.responseText;
+    }
+    xhttp.open("GET","test.info.txt");
+    xhttp.send();
+ }
+
+ function dohvatiDetalje(param){
+    const nasAJAXObjekt= new XMLHttpRequest();
+    if(param==""){
+        document.getElementById("odabir").innerHTML="Još ništa nije odabrano!";
+    }else{
+        nasAJAXObjekt.onload=function(){
+            document.getElementById("odabir").innerHTML=this.responseText;
+        }
+        nasAJAXObjekt.open("GET","test5.php?id="+param);
+        nasAJAXObjekt.send();
+    }
+ }
+
+</script>
+<body>
+    <div id="uvod">
+        <h2>Uvodni prozor</h2>
+    </div>
+    <div>
+        <button type="button" onclick="prvaAjaxFunkcija()">Ajax poziv</button>
+    </div>
+
+    <div>
+        <select name="korisnici" onchange="dohvatiDetalje(this.value)">
+            <option value="">Odaberi iz liste...</option>
+            <option value="1">Prvi Izbor</option>
+            <option value="2">Drugi Izbor</option>
+            <option value="3">Treći Izbor</option>
+            <option value="4">Četvri Izbor</option>
+            <option value="5">Peti Izbor</option>
+        </select>
+    </div>
+    <div id="odabir">Mjesto na koje učitati AJAX odgovor</div>
+    
+</body>
+</html>

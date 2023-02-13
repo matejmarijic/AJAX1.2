@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osnove Javascript-a</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // function info( x){
+        //     console.log("pozdrav "+x);
+        // }
+
+        // info("Mate");
+
+        // // const osoba = "Ime";
+        // // osoba = "prezime";
+
+        // function testLet(){
+        //     let temp= 1;
+        //     console.log("testLet temp = "+temp);
+        // }
+        // let temp= "opis";    
+        // console.log("temp = "+temp);   
+        // testLet();        
+        // console.log("temp = "+temp);
+
+
+        // function testVar(){
+        //     temp2 = 1;
+        //     console.log("testVar temp2 = "+temp2);
+        // }
+        // var temp2 = 2;    
+        // console.log("temp2 = "+temp2);       
+        // testVar();        
+        // console.log("temp2 = "+temp2);
+
+
+        // let imeFunkcije = function(poruka){
+        //     console.error(poruka);
+        // }
+
+        // imeFunkcije("funkija u varijabli!");
+
+        // const constFunkcija=function(p){
+        //     console.error(p);
+        // }
+        // constFunkcija("preko const!")
+
+        // const constObjekt={
+        //     funkcija: function(x){
+        //         console.warn(x)
+        //     }
+        // }
+
+        // constObjekt.funkcija("preko objekta");
+
+        // let f1 = function (p){
+        //     console.log(p);
+        // }
+        // f1 = (p) =>{
+        //     console.log(p);
+        // }
+        // f1 = (p)=>console.log(p);
+        arrowFunkcija =  p =>console.log(p);
+
+        arrowFunkcija("Arrow sintaksa");
+        arrowFunkcija("Još jedna poruka");
+        arrowFunkcija("Još jedna poruka x");
+        arrowFunkcija("Još jedna poruka v");
+        arrowFunkcija("Još jedna poruka b");
+        arrowFunkcija("Još jedna poruka m");
+
+        arrowFunkcija = (x,y) =>console.log( `zbroj je = ${x} + ${y} = ` + x+y );
+        arrowFunkcija(4,5);
+        arrowFunkcija(5,5);
+        arrowFunkcija(6,5);
+
+        arrowFunkcija = (x,y) =>console.log( `zbroj je = ${x} + ${y} = ` + (x+y) );
+        arrowFunkcija(4,5);
+        arrowFunkcija(5,5);
+        arrowFunkcija(6,5);
+
+
+
+    </script>
+</body>
+</html>
